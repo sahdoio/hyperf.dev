@@ -3,6 +3,28 @@ export default defineNuxtConfig({
   compatibilityDate: '2025-07-15',
   devtools: { enabled: true },
 
+  // Runtime configuration
+  runtimeConfig: {
+    // Private keys (only available on server-side)
+    // Public keys (exposed to client-side)
+    public: {
+      siteUrl: process.env.SITE_URL || 'http://localhost:3000',
+      siteName: process.env.SITE_NAME || 'Hyperf.dev'
+    }
+  },
+
+  // Development server configuration
+  devServer: {
+    port: parseInt(process.env.PORT || '3000'),
+    host: '0.0.0.0'
+  },
+
+  // Nitro configuration for production
+  nitro: {
+    port: parseInt(process.env.NITRO_PORT || process.env.PORT || '3000'),
+    host: '0.0.0.0'
+  },
+
   app: {
     head: {
       title: 'Hyperf - High-Performance PHP Framework',
@@ -20,7 +42,6 @@ export default defineNuxtConfig({
       ]
     }
   },
-
 
   modules: [
     '@nuxtjs/tailwindcss'

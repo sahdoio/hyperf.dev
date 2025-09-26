@@ -1,12 +1,15 @@
 {
-  "name": "nuxt-app",
+  "name": "hyperf-dev-website",
   "type": "module",
   "private": true,
   "scripts": {
     "build": "nuxt build",
     "dev": "nuxt dev",
+    "dev:port": "PORT=3001 nuxt dev",
     "generate": "nuxt generate",
     "preview": "nuxt preview",
+    "preview:port": "PORT=3001 nuxt preview",
+    "start": "node .output/server/index.mjs",
     "postinstall": "nuxt prepare"
   },
   "dependencies": {

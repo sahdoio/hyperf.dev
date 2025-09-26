@@ -72,20 +72,45 @@ If you need to install or update Node.js:
    npm install
    ```
 
-4. **Start development server**
+4. **Configure environment (optional)**
    ```bash
-   npm run dev
-   ```
-   The site will be available at `http://localhost:3000`
+   # Copy the example environment file
+   cp .env.example .env
 
-5. **Build for production**
+   # Edit .env to customize settings like PORT
+   # Default PORT is 3000
+   ```
+
+5. **Start development server**
+   ```bash
+   # Using default port (3000) from .env
+   npm run dev
+
+   # Or specify a custom port
+   PORT=3001 npm run dev
+
+   # Or use the predefined script
+   npm run dev:port  # Runs on port 3001
+   ```
+   The site will be available at `http://localhost:3000` (or your configured PORT)
+
+6. **Build for production**
    ```bash
    npm run build
    ```
 
-6. **Generate static files**
+7. **Generate static files**
    ```bash
    npm run generate
+   ```
+
+8. **Preview production build**
+   ```bash
+   # Default port
+   npm run preview
+
+   # Custom port
+   npm run preview:port  # Runs on port 3001
    ```
 
 ## 🌐 Website Structure
@@ -161,12 +186,31 @@ The design is fully responsive and includes:
 
 ## 🛠️ Development
 
+### Environment Configuration
+
+The application uses environment variables for configuration. Copy `.env.example` to `.env` to customize:
+
+```bash
+cp .env.example .env
+```
+
+**Available Environment Variables:**
+
+- `PORT` - Development server port (default: 3000)
+- `NITRO_PORT` - Production server port (default: same as PORT)
+- `SITE_URL` - Base URL for the site (default: http://localhost:3000)
+- `SITE_NAME` - Site name (default: Hyperf.dev)
+- `NODE_ENV` - Application environment (development/production)
+
 ### Available Scripts
 
-- `npm run dev` - Start development server with hot reload
+- `npm run dev` - Start development server with hot reload (uses PORT from .env)
+- `npm run dev:port` - Start development server on port 3001
 - `npm run build` - Build the application for production
 - `npm run generate` - Generate static files for deployment
 - `npm run preview` - Preview the production build locally
+- `npm run preview:port` - Preview production build on port 3001
+- `npm run start` - Start production server (after build)
 - `npm run postinstall` - Prepare Nuxt.js (runs automatically after install)
 
 ### Project Structure

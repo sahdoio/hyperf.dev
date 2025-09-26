@@ -204,12 +204,87 @@
 </template>
 
 <script setup>
+const config = useRuntimeConfig()
+
 useHead({
   title: 'Hyperf - High-Performance PHP Framework',
   meta: [
     {
       name: 'description',
       content: 'Hyperf is a high-performance, coroutine-based PHP framework built on Swoole. Perfect for microservices, web servers, and modern PHP applications.'
+    },
+    {
+      name: 'keywords',
+      content: 'Hyperf, PHP, framework, coroutine, Swoole, microservices, high-performance, async, concurrent, web development, enterprise'
+    },
+    // Open Graph
+    {
+      property: 'og:title',
+      content: 'Hyperf - High-Performance PHP Framework'
+    },
+    {
+      property: 'og:description',
+      content: 'Build lightning-fast PHP applications with Hyperf. Coroutine-based architecture delivers exceptional performance for microservices and web servers.'
+    },
+    {
+      property: 'og:url',
+      content: config.public.siteUrl
+    },
+    {
+      property: 'og:type',
+      content: 'website'
+    },
+    {
+      property: 'og:image',
+      content: `${config.public.siteUrl}/logo.png`
+    },
+    // Twitter Card
+    {
+      name: 'twitter:title',
+      content: 'Hyperf - High-Performance PHP Framework'
+    },
+    {
+      name: 'twitter:description',
+      content: 'Build lightning-fast PHP applications with Hyperf. Coroutine-based architecture delivers exceptional performance.'
+    },
+    {
+      name: 'twitter:image',
+      content: `${config.public.siteUrl}/logo.png`
+    }
+  ],
+  link: [
+    {
+      rel: 'canonical',
+      href: config.public.siteUrl
+    }
+  ]
+})
+
+// Structured data for homepage
+useHead({
+  script: [
+    {
+      type: 'application/ld+json',
+      children: JSON.stringify({
+        '@context': 'https://schema.org',
+        '@type': 'SoftwareApplication',
+        'name': 'Hyperf',
+        'description': 'High-performance, coroutine-based PHP framework built on Swoole',
+        'url': config.public.siteUrl,
+        'applicationCategory': 'DeveloperApplication',
+        'operatingSystem': 'Cross-platform',
+        'programmingLanguage': 'PHP',
+        'offers': {
+          '@type': 'Offer',
+          'price': '0',
+          'priceCurrency': 'USD'
+        },
+        'author': {
+          '@type': 'Organization',
+          'name': 'Hyperf Community',
+          'url': 'https://github.com/hyperf'
+        }
+      })
     }
   ]
 })

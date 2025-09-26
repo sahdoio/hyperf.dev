@@ -38,7 +38,10 @@ export default defineNuxtConfig({
         { name: 'keywords', content: 'Hyperf, PHP, framework, coroutine, Swoole, microservices, high-performance' }
       ],
       link: [
-        { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
+        { rel: 'icon', type: 'image/png', sizes: '32x32', href: '/logo.png' },
+        { rel: 'icon', type: 'image/png', sizes: '16x16', href: '/logo.png' },
+        { rel: 'apple-touch-icon', sizes: '180x180', href: '/logo.png' },
+        { rel: 'shortcut icon', href: '/logo.png' }
       ]
     }
   },

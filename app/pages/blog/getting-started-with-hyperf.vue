@@ -166,11 +166,22 @@ useHead({
 
 <style scoped>
 .prose pre {
-  @apply bg-gray-900 border border-gray-600 p-4 rounded-lg overflow-x-auto text-gray-100;
+  @apply p-4 rounded-lg overflow-x-auto;
+  background-color: #272822;
+  border: 1px solid #3e3d32;
+  color: #f8f8f2;
+  font-family: 'Consolas', 'Monaco', 'Courier New', monospace;
+  font-size: 14px;
+  line-height: 1.5;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
 }
 
 .prose code {
-  @apply bg-gray-700 px-2 py-1 rounded text-sm text-gray-200;
+  @apply px-2 py-1 rounded text-sm;
+  background-color: #49483e;
+  color: #f8f8f2;
+  font-family: 'Consolas', 'Monaco', 'Courier New', monospace;
+  border: 1px solid #5e5d52;
 }
 
 .prose h2 {

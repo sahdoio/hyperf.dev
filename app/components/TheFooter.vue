@@ -3,10 +3,8 @@
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
       <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
         <div class="col-span-1 md:col-span-2">
-          <div class="flex items-center space-x-2 mb-4">
-            <div class="w-8 h-8 bg-gradient-to-r from-yellow-500 to-orange-500 rounded-lg flex items-center justify-center">
-              <span class="text-black font-bold text-lg">H</span>
-            </div>
+          <div class="flex items-center space-x-3 mb-4">
+            <img src="/logo.png" alt="Hyperf Logo" class="h-8 w-8 object-contain">
             <span class="text-xl font-bold">Hyperf</span>
           </div>
           <p class="text-gray-300 mb-4 max-w-md">

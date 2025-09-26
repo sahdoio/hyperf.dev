@@ -1,0 +1,31 @@
+{
+  "posts": [
+    {
+      "id": "getting-started-with-hyperf",
+      "title": "Getting Started with Hyperf: Your First High-Performance PHP Application",
+      "excerpt": "Learn how to build your first application with Hyperf and discover the power of coroutine-based PHP development.",
+      "date": "2025-01-15",
+      "readTime": "5 min read",
+      "author": "Hyperf Community",
+      "slug": "getting-started-with-hyperf",
+      "tags": [
+        { "name": "Tutorial", "color": "blue" },
+        { "name": "Beginner", "color": "green" }
+      ],
+      "gradient": "from-yellow-500 to-orange-600",
+      "featured": true
+    }
+  ],
+  "categories": [
+    { "name": "Tutorial", "count": 2 },
+    { "name": "Performance", "count": 3 },
+    { "name": "Architecture", "count": 2 },
+    { "name": "DevOps", "count": 1 },
+    { "name": "Community", "count": 1 }
+  ],
+  "meta": {
+    "totalPosts": 8,
+    "lastUpdated": "2025-01-15",
+    "postsPerPage": 6
+  }
+}
